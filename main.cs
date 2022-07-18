@@ -19,73 +19,73 @@ using System;
 // Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 
-// class Program {
-//   public static void Main (string[] args) {
-//     int palindrome = 21212;
+class Task1 {
+  public static void Main (string[] args) {
+    int palindrome = 21212;
    
-//     int length = GetLength(palindrome);
-//    var result = Match(palindrome, length);
+    int length = GetLength(palindrome);
+   var result = Match(palindrome, length);
     
-//     Console.WriteLine(length);
-//     Console.ReadLine();
-//     // separate 1st and last digit
-//   }
+    Console.WriteLine(length);
+    Console.ReadLine();
+    // separate 1st and last digit
+  }
 
-//   public static int GetLength(int number)
-//   {
-//     int i = 1;
-//     while(number > 10)
-//     {
-//       number/= 10; //2112,
-//       i++; //1,2,3,4
-//     }
-//     return i;
-//   }
+  public static int GetLength(int number)
+  {
+    int i = 1;
+    while(number > 10)
+    {
+      number/= 10; //2112,
+      i++; //1,2,3,4
+    }
+    return i;
+  }
 
 
-//   public static bool Match1(int palindrome)
-//   {
-//     var result = 0;
-//     var length = GetLength(palindrome); //
-//     //2121 // 1 * length , result + 
-//     for(int i = 1; i < length; i++) //1000
-//     { //2121 / 1000
-//       //1 *length 
-//       //2121/100
-//       //21
-//       // 
-//                //  21212 % 10  = 2
-//                //  var remaider = 21212/10; = 2121
-//                //  2 * 10 ^ length = 20000
-//                //  result += 20000;
-//                //  remainder % 10 = 2121 % 10 = 1
-//                //  1 * 10 ^ length - 1
-//                //  212
+  public static bool Match1(int palindrome)
+  {
+    var result = 0;
+    var length = GetLength(palindrome); //
+    //2121 // 1 * length , result + 
+    for(int i = 1; i < length; i++) //1000
+    { //2121 / 1000
+      //1 *length 
+      //2121/100
+      //21
+      // 
+               //  21212 % 10  = 2
+               //  var remaider = 21212/10; = 2121
+               //  2 * 10 ^ length = 20000
+               //  result += 20000;
+               //  remainder % 10 = 2121 % 10 = 1
+               //  1 * 10 ^ length - 1
+               //  212
                
       
       
-//       result += ( (int)(palindrome % Math.Pow(10, i)) ) * length;
-//     }
-//     return result == palindrome;
-//   }
+      result += ( (int)(palindrome % Math.Pow(10, i)) ) * length;
+    }
+    return result == palindrome;
+  }
   
   
-//   public static bool Match(int palindrome, int length)
-//   {
-//     var lastDigit = palindrome/10; // 21212/10000 = 2121 
-//     var firstDigit = palindrome/ Math.Pow(10, length);   // max digit length
-//     if(firstDigit != lastDigit)
-//     {
-//       return false;
-//     }
-//     else
-//     {
-//       var newPalindrome = palindrome/
-//       return  Match( palindrome ,  ); // ignore last and 1st value );
-//     }
+  public static bool Match(int palindrome, int length)
+  {
+    var lastDigit = palindrome/10; // 21212/10000 = 2121 
+    var firstDigit = palindrome/ Math.Pow(10, length);   // max digit length
+    if(firstDigit != lastDigit)
+    {
+      return false;
+    }
+    else
+    {
+      var newPalindrome = palindrome/
+      return  Match( palindrome ,  ); // ignore last and 1st value );
+    }
     
-//   }
-// }
+  }
+}
 
 //Task 2
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -111,7 +111,7 @@ using System;
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
-class Program {
+class Task2 {
   public static void Main (string[] args) {
     
     
